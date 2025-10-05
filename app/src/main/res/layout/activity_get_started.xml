@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen"
+    android:padding="20dp"
+    android:scaleType="centerCrop">
+
+
+    <!-- Main Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Your Smart\n Medicine Companion"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:gravity="start"
+        android:layout_marginTop="200dp"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Main Subtitle under Title -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:text="   Stay on track with your health. Scan prescriptions, set reminders,\n   connect with your doctors, and never miss a dose again."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <!-- Image Illustration -->
+    <ImageView
+        android:id="@+id/ivIllustration"
+        android:layout_width="3500dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/tvSubtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:contentDescription="Illustration"
+        android:src="@drawable/logo2" />
+
+    <!-- Dots Indicator -->
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivIllustration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/dot_active" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/dot_inactive" />
+    </LinearLayout>
+
+    <!-- Small Subtitle above Get Started Button -->
+    <TextView
+        android:id="@+id/tvSmallSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dotsLayout"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Stay on track with your health. Scan prescriptions, set reminders, connect with your doctors, and never miss a dose again."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <!-- Get Started Button -->
+    <Button
+        android:id="@+id/btnGetStarted"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSmallSubtitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/green"
+        android:padding="12dp"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGetStarted"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@android:color/white"
+        android:padding="12dp"
+        android:text="Don’t have an account?"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

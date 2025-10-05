@@ -1,0 +1,43 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.medassist">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MedAssist"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedAssist">
+
+        <!-- Launcher Activity -->
+        <activity
+            android:name=".GetStartedActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <!-- No intent filter needed if not launcher -->
+        </activity>
+
+        <!-- SignUp Activity -->
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Main Activity (Home Screen) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+
+    </application>
+
+</manifest>

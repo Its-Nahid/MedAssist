@@ -6,7 +6,7 @@
 ![Firebase](https://img.shields.io/badge/Backend-Firebase-orange)
 ![Gemini](https://img.shields.io/badge/AI-Google%20Gemini-blueviolet)
 ![ML Kit](https://img.shields.io/badge/OCR-Google%20ML%20Kit-red)
-![Release](https://img.shields.io/github/v/release/Its-Nahid/MedAssist)
+![Release](https://img.shields.io/github.com/Its-Nahid/MedAssist/releases/tag/v4.0.0)
 ![Repo Size](https://img.shields.io/github/repo-size/Its-Nahid/MedAssist)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 

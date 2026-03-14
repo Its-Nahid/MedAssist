@@ -1,101 +1,234 @@
 # 🩺 MedAssist — Advanced Health & Medicine Management Application
 
-**MedAssist** is a modern, comprehensive health management solution built natively with **Android Studio**. Designed to streamline personal healthcare, this application helps users manage medications, track stock, scan medicine labels using AI, and consult a smart health assistant.
+![Android](https://img.shields.io/badge/Platform-Android-green)
+![Java](https://img.shields.io/badge/Language-Java-blue)
+![Kotlin](https://img.shields.io/badge/Language-Kotlin-purple)
+![Firebase](https://img.shields.io/badge/Backend-Firebase-orange)
+![Gemini](https://img.shields.io/badge/AI-Google%20Gemini-blueviolet)
+![ML Kit](https://img.shields.io/badge/OCR-Google%20ML%20Kit-red)
+![Release](https://img.shields.io/github/v/release/Its-Nahid/MedAssist)
+![Repo Size](https://img.shields.io/github/repo-size/Its-Nahid/MedAssist)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-This version introduces powerful upgrades including **Google ML Kit** for OCR scanning, **Firebase Firestore** for cloud synchronization, and full **Gemini AI** integration for intelligent assistance.
+**MedAssist** is a modern Android health management application designed to simplify medication tracking and health assistance.
 
----
+Built natively using **Android Studio**, the app allows users to:
 
-### ✨ Key Features
+- Manage medicines
+- Track medicine stock
+- Scan medicine labels using AI OCR
+- Consult an AI-powered health assistant
 
-#### 🛡️ Authentication & Security
-* 🔐 **Firebase Authentication**: Secure Email & Password Login / Signup.
-* 🧭 **Private Dashboard**: Secure, personalized access for authenticated users.
-
-#### 💊 Medication & Stock Management
-* 📦 **Medicine Cloud Database**: Add, view, and manage medicines, synced in real-time with **Firebase Firestore**.
-* 📊 **Stock Tracker**: Keep track of available medicines and receive alerts for low stock.
-* ⏰ **Active Reminders**: Never miss a dose with the built-in reminder system.
-
-#### 🤖 AI & Smart Features (New in v3)
-* 📷 **Smart Medicine Scanner (OCR)**: Instantly scan medicine labels using **CameraX** and **Google ML Kit** Text Recognition.
-* 💬 **Gemini AI Health Assistant**: Ask health-related queries and get instant advice powered by the **Google Gemini API**.
-* 🔊 **Text-to-Speech Accessibility**: Built-in voice utility for reading out medicine details and instructions.
-
-#### 🧑‍⚕️ Additional Utilities
-* 🏥 **Doctor Directory**: Browse and find doctors easily right from the app.
-* 🎨 **Modern & Responsive UI**: Clean, accessible, and user-friendly interface constructed with native Android XML.
+The latest version integrates **cloud storage, machine learning, and AI assistance** to provide a smarter personal healthcare tool.
 
 ---
 
-### ⚙️ Tech Stack
+# 📥 Download
 
-* **Language:** Java / Kotlin
-* **Framework:** Android SDK
-* **Cloud & Backend:** Firebase Authentication, Firestore
-* **Artificial Intelligence:** Google Gemini API, Google ML Kit (Text Recognition)
-* **Camera:** Android CameraX
-* **Networking:** OkHttp, JSON
-* **Architecture:** Gradle-based Android project structure
-* **IDE:** Android Studio
+Download the latest release:
 
----
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20APK-brightgreen?style=for-the-badge&logo=android)](https://github.com/Its-Nahid/MedAssist/releases/tag/v4.0.0)
 
-### 🚀 Getting Started
+Browse all releases:
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Its-Nahid/MedAssist.git
-   ```
-2. **Open the project** in **Android Studio**.
-3. **Configure Firebase:**
-   * Create a Firebase project and add your `google-services.json` to the `app/` directory.
-   * Enable Email/Password authentication and Firestore database in the Firebase Console.
-4. **Configure Gemini API:**
-   * Create a `local.properties` file in the root directory (if it does not exist).
-   * Add your Gemini API key: 
-     ```properties
-     GEMINI_API_KEY=your_actual_api_key_here
-     ```
-5. **Build and Run** the app on an emulator or physical Android device.
+👉 https://github.com/Its-Nahid/MedAssist/releases
 
 ---
 
-### 🧾 Roadmap & Versions
+# 📱 Screenshots
 
-| Version | Description | Status |
-| :--- | :--- | :--- |
-| **v1** | Base UI Implementation | ✅ Done |
-| **v2** | Firebase Email Authentication + Dashboard integration | ✅ Done |
-| **v3** | Firestore Integration, Stock Tracker, Reminders & Push Notifications | ✅ Done |
-| **v4** | Smart Medicine Scanner (ML Kit) & AI Chatbot Assistant (Gemini) | ✅ Done |
-| **v5** | Multi-language support, Advanced Health Metrics Dashboard, and Wear OS integration | 🚀 Planned |
+*(Screenshots will be added soon)*
 
----
+| Login | Dashboard | Scanner | AI Assistant |
+|------|------|------|------|
+| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) | ![Scanner](screenshots/scanner.png) | ![AI](screenshots/ai.png) |
 
-### 🐛 Current Known Bugs
+Create this folder later:
 
-*   *(Add any known bugs or UI glitches here as you find them)*
-*   Sometimes the ML Kit scanner might struggle with highly stylized or faded medicine labels.
-*   Push notification exact timing can vary depending on Android OS battery optimization settings.
-
----
-
-### 🧠 What I Learned From This Project
-
-Building **MedAssist** was an incredible journey that significantly leveled up my Android development skills. Key takeaways include:
-
-1. **Integrating AI APIs**: Learned how to effectively integrate third-party REST APIs (Google Gemini) securely using `OkHttp` and hiding sensitive API keys safely using `local.properties` and Gradle `BuildConfig`.
-2. **Machine Learning on Device**: Gained hands-on experience with **Google ML Kit** and **CameraX** to perform live optical character recognition (OCR) natively on mobile devices.
-3. **Advanced Firebase Concepts**: Transitioned from basic Firebase Auth to implementing robust, real-time NoSQL database structures with **Firebase Firestore**.
-4. **Complex UI & State Management**: Better understood how to manage multiple activities, handle asynchronous operations, and map custom models (like `Medicine` and `Doctor`) to custom Recycler View adapters.
-5. **Accessibility Integration**: Incorporated Text-to-Speech tools to make the application more accessible and inclusive for a wider range of users.
+```
+screenshots/
+login.png
+dashboard.png
+scanner.png
+ai.png
+```
 
 ---
 
-### 👨‍💻 Author
+# ✨ Key Features
+
+## 🛡 Authentication & Security
+
+- Firebase Email & Password Authentication
+- Secure user login and registration
+- Personalized user dashboard
+
+---
+
+## 💊 Medicine & Stock Management
+
+- Add and manage medicines
+- Real-time cloud synchronization using **Firebase Firestore**
+- Medicine stock tracker
+- Reminder system for medicine schedules
+
+---
+
+## 🤖 AI & Smart Features
+
+### 📷 Smart Medicine Scanner
+- Camera-based label scanning
+- OCR using **Google ML Kit**
+- Extract medicine information directly from packaging
+
+### 💬 Gemini AI Health Assistant
+- Ask health-related questions
+- AI-generated responses using **Google Gemini API**
+
+### 🔊 Accessibility Support
+- Text-to-Speech for reading medicine instructions
+
+---
+
+## 🧑⚕ Additional Utilities
+
+- Doctor directory
+- Clean modern Android UI
+- Built with native Android XML layouts
+
+---
+
+# ⚙️ Tech Stack
+
+| Category | Technology |
+|--------|--------|
+| Language | Java / Kotlin |
+| Framework | Android SDK |
+| Backend | Firebase Authentication |
+| Database | Firebase Firestore |
+| AI | Google Gemini API |
+| OCR | Google ML Kit |
+| Camera | Android CameraX |
+| Networking | OkHttp |
+| Architecture | Gradle Android Project |
+| IDE | Android Studio |
+
+---
+
+# 🚀 Getting Started
+
+## Clone the repository
+
+```bash
+git clone https://github.com/Its-Nahid/MedAssist.git
+```
+
+Open the project in **Android Studio**.
+
+---
+
+## Configure Firebase
+
+1. Create a Firebase project
+2. Add the file:
+
+```
+app/google-services.json
+```
+
+3. Enable:
+
+* Email/Password Authentication
+* Firestore Database
+
+---
+
+## Configure Gemini API
+
+Create a `local.properties` file:
+
+```
+GEMINI_API_KEY=your_actual_api_key_here
+```
+
+This prevents API keys from being committed to the repository.
+
+---
+
+## Run the Project
+
+Build and run the application on:
+
+* Android Emulator
+* Physical Android Device
+
+---
+
+# 🧾 Roadmap
+
+| Version | Description                               | Status     |
+| ------- | ----------------------------------------- | ---------- |
+| v1      | Base UI implementation                    | ✅ Done     |
+| v2      | Firebase authentication                   | ✅ Done     |
+| v3      | Firestore + stock tracker + reminders     | ✅ Done     |
+| v4      | OCR scanner + Gemini AI assistant         | ✅ Done     |
+| v5      | Multi-language + health metrics + Wear OS | 🚀 Planned |
+
+---
+
+# 🐛 Known Issues
+
+* OCR may struggle with **faded or stylized medicine labels**
+* Notification timing may vary due to **Android battery optimization**
+
+---
+
+# 🧠 What I Learned
+
+### AI API Integration
+
+Implemented secure API calls using **OkHttp** and protected API keys via `local.properties`.
+
+### On-device Machine Learning
+
+Used **Google ML Kit OCR** with **CameraX** for real-time medicine scanning.
+
+### Firebase Backend
+
+Built a real-time cloud database using **Firestore**.
+
+### Android Development
+
+Managed multiple activities, async operations, and custom RecyclerViews.
+
+### Accessibility
+
+Integrated **Text-to-Speech** to improve usability.
+
+---
+
+# 📂 Project Structure
+
+```
+MedAssist
+│
+├── app
+├── screenshots
+│
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+---
+
+# 👨💻 Author
 
 **Nahid**
-🔗 [GitHub @Its-Nahid](https://github.com/Its-Nahid)
 
-⭐ *If you find this project useful or interesting, please consider giving it a star on GitHub! It highly encourages further development!*
+GitHub
+[https://github.com/Its-Nahid](https://github.com/Its-Nahid)
+
+---
+
+⭐ If you like the project, please consider **starring the repository** on GitHub.

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.medassist">
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    
+    <application android:forceDarkAllowed="false" android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="MedAssist" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme.MedAssist">
+
+        
+        <activity android:name=".GetStartedActivity" android:exported="true">
+            </activity>
+
+        
+        <activity android:name=".LoginActivity" android:exported="true" />
+
+        
+        <activity android:name=".SignUpActivity" android:exported="true" />
+
+        
+        <activity android:name=".MainActivity" android:exported="true" />
+
+        
+        <activity android:name=".ScanMedicineActivity" android:exported="true" android:label="Scan Medicine" />
+
+        
+        <activity android:name=".DoctorActivity" android:exported="true" android:label="Doctors" />
+
+        
+        <activity android:name=".MedicineListActivity" android:exported="true" />
+
+        
+        <activity android:name=".MedicineDetailsActivity" android:exported="true" />
+
+        
+        <activity android:name=".ChatActivity" android:exported="true" android:label="Gemini Assistant" />
+    
+        
+        <receiver android:name=".reminders.NotificationReceiver" android:exported="false" />
+        <receiver android:name=".reminders.BootReceiver" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.BOOT_COMPLETED" />        <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+        </intent-filter>
+        </receiver>
+        <receiver android:name=".stock.DailyStockCheckReceiver" android:exported="false" />
+
+        
+        <activity android:name=".AddMedicineActivity" android:exported="true" />
+        <activity android:name=".ActiveRemindersActivity" android:exported="true" />
+        <activity android:name=".StockTrackerActivity" android:exported="true" />
+    
+        <receiver android:name="com.example.medassist.reminders.ReminderActionReceiver" android:exported="false" />
+    
+        <service android:name="com.example.medassist.reminders.AlarmRingingService" android:exported="false" android:foregroundServiceType="mediaPlayback" />
+    <activity android:name=".SplashActivity" android:exported="true" android:theme="@style/Theme.MedAssist.Splash"><intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter></activity></application>
+
+</manifest>

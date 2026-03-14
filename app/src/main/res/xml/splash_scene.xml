@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@id/fadeLayer">
+            <PropertySet android:alpha="1"/>
+        </Constraint>
+        <Constraint android:id="@id/logo">
+            <Transform android:scaleX="0.9" android:scaleY="0.9"/>
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+        <Constraint android:id="@id/shine">
+            <Transform android:translationX="-260dp"/>
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/fadeLayer">
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+        <Constraint android:id="@id/logo">
+            <Transform android:scaleX="1.0" android:scaleY="1.0"/>
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+        <Constraint android:id="@id/shine">
+            <Transform android:translationX="280dp"/>
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@id/end"
+        motion:duration="1600">
+
+        <KeyFrameSet>
+            <!-- Fade in logo smoothly -->
+            <KeyAttribute motion:motionTarget="@id/logo" motion:framePosition="5" android:alpha="0"/>
+            <KeyAttribute motion:motionTarget="@id/logo" motion:framePosition="22" android:alpha="1"/>
+            <KeyAttribute motion:motionTarget="@id/logo" motion:framePosition="35" android:scaleX="1.05" android:scaleY="1.05"/>
+            <KeyAttribute motion:motionTarget="@id/logo" motion:framePosition="48" android:scaleX="1.0" android:scaleY="1.0"/>
+
+            <!-- Soft shine sweep -->
+            <KeyAttribute motion:motionTarget="@id/shine" motion:framePosition="45" android:alpha="0.0"/>
+            <KeyAttribute motion:motionTarget="@id/shine" motion:framePosition="52" android:alpha="0.25"/>
+            <KeyAttribute motion:motionTarget="@id/shine" motion:framePosition="60" android:alpha="0.0"/>
+
+            <!-- Fade out logo sooner -->
+            <KeyAttribute motion:motionTarget="@id/logo" motion:framePosition="78" android:alpha="1.0"/>
+            <KeyAttribute motion:motionTarget="@id/logo" motion:framePosition="90" android:alpha="0.0"/>
+
+            <!-- Fade out the white layer at the very end to reveal next screen underneath -->
+            <KeyAttribute motion:motionTarget="@id/fadeLayer" motion:framePosition="85" android:alpha="1.0"/>
+            <KeyAttribute motion:motionTarget="@id/fadeLayer" motion:framePosition="100" android:alpha="0.0"/>
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

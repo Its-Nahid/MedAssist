@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MedAssist</string>
+    <string name="placeholder_quotes">“   ”</string>
+</resources>

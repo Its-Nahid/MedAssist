@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:paddingTop="?attr/actionBarSize"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Full-bleed image (edge-to-edge, starts after navbar/status bar) -->
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Medicine Image"
+            android:background="@android:color/darker_gray"/>
+
+        <!-- Content padding matches your design -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="16dp">
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:textColor="@android:color/black"/>
+
+            <!-- Section: Description -->
+            <TextView
+                android:id="@+id/label_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/label_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine data provided by MedlinePlus"
+                android:textSize="12sp"
+                android:textColor="#9CA3AF"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text here"
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/black"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#E5E7EB"/>
+
+            <!-- Uses / Indications -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/icon_uses"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/uses"
+                    android:contentDescription="Uses Icon"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/label_uses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Uses / Indications"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/detail_uses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Details in short"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Side Effects -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="14dp">
+
+                <ImageView
+                    android:id="@+id/icon_side_effects"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/side_effects"
+                    android:contentDescription="Side Effects Icon"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/label_side_effects"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Side Effects"
+                        android:textStyle="bold"
+                        android:textColor="#F57C00"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/detail_side_effects"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="In short Details"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Precautions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="14dp">
+
+                <ImageView
+                    android:id="@+id/icon_precautions"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/precautions"
+                    android:contentDescription="Precautions Icon"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/label_precautions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Precautions"
+                        android:textStyle="bold"
+                        android:textColor="#8E24AA"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/detail_precautions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="In short"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Save button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:text="Save this Medicine"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/star_icon"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@android:color/white"
+                app:backgroundTint="#4CAF50"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

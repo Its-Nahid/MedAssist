@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    app:layoutDescription="@xml/splash_scene">
+
+    <!-- Full-screen white layer that we will fade OUT to reveal the next screen underneath -->
+    <View
+        android:id="@+id/fadeLayer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/splash_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- App logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/medassist_logo"
+        android:contentDescription="@string/app_name"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subtle diagonal shine overlay -->
+    <ImageView
+        android:id="@+id/shine"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:rotation="20"
+        android:alpha="0"
+        android:src="@drawable/splash_shine"
+        android:elevation="6dp"
+        app:layout_constraintTop_toTopOf="@id/logo"
+        app:layout_constraintBottom_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="@id/logo"
+        app:layout_constraintEnd_toEndOf="@id/logo"/>
+</androidx.constraintlayout.motion.widget.MotionLayout>

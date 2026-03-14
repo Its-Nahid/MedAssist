@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Medicine Image -->
+        <ImageView
+            android:id="@+id/med_image"
+            android:layout_width="80dp"
+            android:layout_height="85dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Medicine Image"
+            android:background="@drawable/bg_image_placeholder"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- Info Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/med_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine Name"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/med_short_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Used for fever, pain relief"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/med_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: Rs.25"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="15sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Speak icon on right -->
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Speak details"
+            android:padding="6dp"
+            android:src="@drawable/ic_speak"
+            app:tint="@color/blue" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

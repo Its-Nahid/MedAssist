@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- outer dark ring -->
+    <item>
+        <shape>
+            <size android:width="120dp" android:height="120dp"/>
+            <solid android:color="#3A3A3A"/> <!-- dark ring -->
+            <corners android:radius="60dp"/>
+            <padding android:left="6dp" android:top="6dp" android:right="6dp" android:bottom="6dp"/>
+            <stroke android:width="4dp" android:color="#BDBDBD"/>
+        </shape>
+    </item>
+    <!-- small white inner ring (to match screenshot's thin white ring) -->
+    <item android:top="8dp" android:bottom="8dp" android:left="8dp" android:right="8dp">
+        <shape>
+            <size android:width="104dp" android:height="104dp"/>
+            <solid android:color="#00000000"/>
+            <stroke android:width="3dp" android:color="#FFFFFFFF"/>
+            <corners android:radius="52dp"/>
+        </shape>
+    </item>
+</layer-list>
